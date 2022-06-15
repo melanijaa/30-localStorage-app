@@ -70,12 +70,13 @@ body * {
 }
 
 .main {
+  position: relative;
   display: flex;
   background-color: #249e64;
 }
 
 .text {
-  width: 577.6px;
+  margin-left: 16px;
 }
 
 h1 {
@@ -90,4 +91,16 @@ p {
   line-height: 27px;
   margin: 18px 0px;
 }
+
+.appStore {
+  margin: 48px 0px 40px;
+  display: inline-block;
+}
+
+.kolt {
+  position: absolute;
+  right: 0;
+}
+
+
 
