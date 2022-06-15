@@ -58,7 +58,6 @@ function App() {
       <Main></Main>
       <SideBar></SideBar>
       <SideBarTwo></SideBarTwo>
-      <div className="asdfghj">
       <Create setCreateData={setCreateData}></Create>
       <List
         exes={exes}
@@ -70,8 +69,6 @@ function App() {
         modalData={modalData}
         setModalData={setModalData}
       ></Edit>
-      </div>
-      
     </>
   );
 }
