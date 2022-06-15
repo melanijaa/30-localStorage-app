@@ -14,20 +14,17 @@ function Create({ setCreateData }) {
   };
 
   return (
-    <div className="card mt-4">
-      <div className="card-header">
-        <h2>Create new Ex</h2>
-      </div>
+    <div className="card">
       <div className="card-body">
         <div className="form-group">
           <label>Name</label>
           <input
             type="text"
+            placeholder="Password"
             className="form-control"
             onChange={(e) => setName(e.target.value)}
             value={name}
           />
-          <small className="form-text text-muted">Enter Ex name here.</small>
         </div>
         <div className="form-group">
           <label>Type</label>
@@ -40,17 +37,16 @@ function Create({ setCreateData }) {
             <option value="2">Written</option>
             <option value="3">Spoken</option>
           </select>
-          <small className="form-text text-muted">Select Ex type here.</small>
         </div>
         <div className="form-group">
           <label>Place</label>
           <input
             type="text"
+            placeholder="Password"
             className="form-control"
             onChange={(e) => setPlace(e.target.value)}
             value={place}
           />
-          <small className="form-text text-muted">Enter Ex place here.</small>
         </div>
         <button
           type="button"

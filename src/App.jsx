@@ -8,6 +8,7 @@ import Edit from "./Components/Edit";
 import NavBar from "./Components/NavBar";
 import Main from "./Components/Main";
 import SideBar from "./Components/SideBar";
+import SideBarTwo from "./Components/SideBarTwo";
 
 function App() {
   const [lastUpdate, setLastUpdate] = useState(Date.now());
@@ -53,30 +54,25 @@ function App() {
 
   return (
     <>
-    <NavBar></NavBar>
-    <Main></Main>
-    <SideBar></SideBar>
-      <div className="container">
-        <div className="row">
-          <div className="col-4">
-            <Create setCreateData={setCreateData}></Create>
-          </div>
-          <div className="col-8">
-            <List
-              exes={exes}
-              setDeleteData={setDeleteData}
-              setModalData={setModalData}
-            ></List>
-          </div>
-        </div>
-      </div>
+      <NavBar></NavBar>
+      <Main></Main>
+      <SideBar></SideBar>
+      <SideBarTwo></SideBarTwo>
+      <div className="asdfghj">
+      <Create setCreateData={setCreateData}></Create>
+      <List
+        exes={exes}
+        setDeleteData={setDeleteData}
+        setModalData={setModalData}
+      ></List>
       <Edit
         setEditData={setEditData}
         modalData={modalData}
         setModalData={setModalData}
       ></Edit>
+      </div>
+      
     </>
   );
 }
 export default App;
-

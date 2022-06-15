@@ -4,11 +4,8 @@ import Ex from "./Ex";
 
 function List({ exes, setDeleteData, setModalData }) {
   return (
-    <div className="card mt-4">
-      <div className="card-header">
-        <h2>List of Ex`es</h2>
-      </div>
-      <div className="card-body">
+    <div className="card-list">
+      <div className="card-body-list">
         <ul className="list-group">
           {exes
             ? exes.map((ex) => (
