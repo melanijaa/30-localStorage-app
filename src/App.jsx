@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import "./bootstrap.css";
+//import "./bootstrap.css";
 import "./crud.scss";
 import Create from "./Components/Create";
 import List from "./Components/List";
 import { create, edit, read, remove } from "./Functions/localStorage";
 import Edit from "./Components/Edit";
+import NavBar from "./Components/NavBar";
+import Main from "./Components/Main";
 
 function App() {
   const [lastUpdate, setLastUpdate] = useState(Date.now());
@@ -50,6 +52,8 @@ function App() {
 
   return (
     <>
+    <NavBar></NavBar>
+    <Main></Main>
       <div className="container">
         <div className="row">
           <div className="col-4">
