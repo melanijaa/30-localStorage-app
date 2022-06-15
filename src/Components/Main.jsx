@@ -1,6 +1,4 @@
-import kolt from "../images/kolt.png";
 import appStore from "../images/en.svg";
-import googlePlay from "../images/googlePlay.svg";
 
 const Main = () => {
   return (
@@ -21,7 +19,6 @@ const Main = () => {
           <img src={appStore} alt="appStore"></img>
         </a>
       </div>
-      <img className="kolt" src={kolt} alt="kolt"></img>
     </div>
   );
 };

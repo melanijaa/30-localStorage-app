@@ -7,6 +7,7 @@ import { create, edit, read, remove } from "./Functions/localStorage";
 import Edit from "./Components/Edit";
 import NavBar from "./Components/NavBar";
 import Main from "./Components/Main";
+import SideBar from "./Components/SideBar";
 
 function App() {
   const [lastUpdate, setLastUpdate] = useState(Date.now());
@@ -54,6 +55,7 @@ function App() {
     <>
     <NavBar></NavBar>
     <Main></Main>
+    <SideBar></SideBar>
       <div className="container">
         <div className="row">
           <div className="col-4">

@@ -52,7 +52,7 @@ body * {
 
 .header .logo {
   display: inline-block;
-  margin-left: -16px;
+  margin-left: 0px;
   margin-right: 16px;
   padding: 24px 16px 16px;
 }
@@ -73,10 +73,14 @@ body * {
   position: relative;
   display: flex;
   background-color: #249e64;
+  background-image: url(./images/kolt.png);
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .text {
-  margin-left: 16px;
+  margin-left: 14px;
+  padding: 0 24px;
 }
 
 h1 {
@@ -97,9 +101,24 @@ p {
   display: inline-block;
 }
 
-.kolt {
-  position: absolute;
-  right: 0;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F4F6;
+  padding: 42px 24px 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 0px 0px 24px;
+}
+
+.sidebarA {
+  font-size: 16px;
+  text-decoration: none;
+  color: #2f313f;
 }
 
 
