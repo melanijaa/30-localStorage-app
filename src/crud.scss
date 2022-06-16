@@ -162,7 +162,7 @@ h2 {
 
 .card-body {
   height: 520px;
-  width: 400px;
+  width: 350px;
   background-color: rgba(255, 255, 255, 0.13);
   border-radius: 10px;
   backdrop-filter: blur(10px);
@@ -176,7 +176,7 @@ h2 {
 
 .card-body-list {
   height: 520px;
-  width: 900px;
+  width: 750px;
   background-color: rgba(255, 255, 255, 0.13);
   border-radius: 10px;
   backdrop-filter: blur(10px);
@@ -185,7 +185,7 @@ h2 {
   padding: 50px 35px;
   position: absolute;
   top: 1095px;
-  left: 500px;
+  left: 450px;
 }
 
 label {
@@ -207,7 +207,7 @@ input {
   font-weight: 300;
 }
 
-button {
+.btn2 {
   margin-top: 50px;
   width: 100%;
   background-color: #ffffff;
@@ -217,4 +217,21 @@ button {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.btn {
+  color: #fff;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 33px;
+  border: none;
+}
+
+.edit {
+  background-color: #34D186;
+  margin-right: 10px;
+}
+
+.delete {
+  background-color: #EB4755;
 }

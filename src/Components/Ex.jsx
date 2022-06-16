@@ -1,3 +1,6 @@
+import { RiDeleteBin2Fill } from "react-icons/ri";
+import { GrEdit } from "react-icons/gr";
+
 function Ex({ ex, setDeleteData, setModalData }) {
   const handleDelete = () => {
     setDeleteData(ex);
@@ -8,31 +11,39 @@ function Ex({ ex, setDeleteData, setModalData }) {
   };
 
   return (
-    <li className="list-group-item">
+    <div className="list-group-item">
       <div className="item">
         <div className="content">
-          <b>{ex.name}</b>
-          <span>{["Test", "Written", "Spoken"][ex.type - 1]}</span>
-          <i>{ex.place}</i>
+          <span>{ex.id}</span>
+          <span>{ex.name}</span>
+          <span>{ex.time}</span>
+          <span>{ex.km}</span>
+          <span>
+            {ex.isBusy ? (
+              <div className="uzimtas">Busy</div>
+            ) : (
+              <div className="laisvas">Available</div>
+            )}
+          </span>
         </div>
         <div className="buttons">
           <button
             type="button"
-            className="btn btn-outline-success ml-2"
+            className="btn btn-outline-success ml-2 edit"
             onClick={handleEdit}
           >
-            Edit
+            <GrEdit/>
           </button>
           <button
             type="button"
-            className="btn btn-outline-danger ml-2"
+            className="btn btn-outline-danger ml-2 delete"
             onClick={handleDelete}
           >
-            Delete
+            <RiDeleteBin2Fill/>
           </button>
         </div>
       </div>
-    </li>
+    </div>
   );
 }
 

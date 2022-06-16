@@ -2,20 +2,29 @@ import { useEffect, useState } from "react";
 
 function Edit({ modalData, setModalData, setEditData }) {
   const [name, setName] = useState("");
-  const [type, setType] = useState("1");
-  const [place, setPlace] = useState("");
+  const [time, setTime] = useState("1");
+  const [newKm, setNewKm] = useState(0);
+  const [isBusy, setIsBusy] = useState("0");
 
   useEffect(() => {
     if (null === modalData) {
       return;
     }
     setName(modalData.name);
-    setType(modalData.type);
-    setPlace(modalData.place);
+    setTime(modalData.time);
+    setNewKm(0);
+    setIsBusy(modalData.isBusy);
   }, [modalData]);
 
   const handleEdit = () => {
-    const data = { name, type, place, id: modalData.id };
+    const data = {
+      name,
+      time,
+      km: Number(modalData.km) + Number(newKm),
+      newKm,
+      isBusy: isBusy ? "true" : false,
+      id: modalData.id,
+    };
     setEditData(data);
     setModalData(null);
   };
@@ -29,7 +38,7 @@ function Edit({ modalData, setModalData, setEditData }) {
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title">Ex Changer</h5>
+            <h5 className="modal-title">Edit</h5>
             <button
               type="button"
               className="close"
@@ -40,44 +49,36 @@ function Edit({ modalData, setModalData, setEditData }) {
           </div>
           <div className="modal-body">
             <div className="form-group">
-              <label>Name</label>
+              <label>Registration code:</label>
               <input
                 type="text"
                 className="form-control"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
               />
-              <small className="form-text text-muted">
-                Enter Ex name here.
-              </small>
             </div>
             <div className="form-group">
-              <label>Type</label>
-              <select
-                className="form-control"
-                onChange={(e) => setType(e.target.value)}
-                value={type}
-              >
-                <option value="1">Test</option>
-                <option value="2">Written</option>
-                <option value="3">Spoken</option>
-              </select>
-              <small className="form-text text-muted">
-                Select Ex type here.
-              </small>
-            </div>
-            <div className="form-group">
-              <label>Place</label>
+              <label>Last time used:</label>
               <input
-                type="text"
-                className="form-control"
-                onChange={(e) => setPlace(e.target.value)}
-                value={place}
+            type="date"
+            className="form-control"
+            onChange={(e) => setName(e.target.value)}
+            value={time}
               />
-              <small className="form-text text-muted">
-                Enter Ex place here.
-              </small>
             </div>
+            <div className="form-group">
+              <label>Total Kilometers Ride:</label>
+            </div>
+            <div className="form-group">
+              <label>Add New Kilometers</label>
+              <input
+                type="number"
+                className="form-row"
+                onChange={(e) => setNewKm(e.target.value)}
+                value={newKm}
+              />
+            </div>
+
           </div>
           <div className="modal-footer">
             <button

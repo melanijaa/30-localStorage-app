@@ -1,32 +1,70 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import randLetters from "../Functions/randLetters";
 
 function Create({ setCreateData }) {
-  const [name, setName] = useState("");
-  const [type, setType] = useState("1");
-  const [place, setPlace] = useState("");
+  const [id, setId] = useState('');
+  const [name, setName] = useState(randLetters());
+  const [time, setTime] = useState("1");
+  const [km, setKm] = useState(0);
+  let countKolts = useRef(0);
 
   const handleCreate = () => {
-    const data = { name, type, place };
+    const data = { id, name, time, km:parseFloat(km) };
     setCreateData(data);
-    setName("");
-    setType("1");
-    setPlace("");
+    setId('');
+    setName(randLetters());
+    setTime('');
+    setKm(0);
+    countKolts.current++
   };
 
   return (
     <div className="card">
       <div className="card-body">
+        <label className="title">Add New Scooter</label>
         <div className="form-group">
-          <label>Name</label>
+          <label>Registration Code:</label>
           <input
             type="text"
-            placeholder="Password"
             className="form-control"
             onChange={(e) => setName(e.target.value)}
             value={name}
           />
         </div>
         <div className="form-group">
+          <label>Last time used:</label>
+          <input
+            type="date"
+            className="form-control"
+            onChange={(e) => setName(e.target.value)}
+            value={time}
+          />
+        </div>
+        <div className="form-group">
+          <label>Total Kilometers Ride:</label>
+          <input
+            type="text"
+            className="form-control"
+            onChange={(e) => setKm(e.target.value)}
+            value={km}
+          />
+        </div>
+        <button
+          type="button"
+          className="btn2 btn-outline-primary"
+          onClick={handleCreate}
+        >
+          Create
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default Create;
+
+/*
+<div className="form-group">
           <label>Type</label>
           <select
             className="form-control"
@@ -38,26 +76,4 @@ function Create({ setCreateData }) {
             <option value="3">Spoken</option>
           </select>
         </div>
-        <div className="form-group">
-          <label>Place</label>
-          <input
-            type="text"
-            placeholder="Password"
-            className="form-control"
-            onChange={(e) => setPlace(e.target.value)}
-            value={place}
-          />
-        </div>
-        <button
-          type="button"
-          className="btn btn-outline-primary"
-          onClick={handleCreate}
-        >
-          Create
-        </button>
-      </div>
-    </div>
-  );
-}
-
-export default Create;
+*/

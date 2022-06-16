@@ -58,17 +58,23 @@ function App() {
       <Main></Main>
       <SideBar></SideBar>
       <SideBarTwo></SideBarTwo>
-      <Create setCreateData={setCreateData}></Create>
-      <List
-        exes={exes}
-        setDeleteData={setDeleteData}
-        setModalData={setModalData}
-      ></List>
-      <Edit
-        setEditData={setEditData}
-        modalData={modalData}
-        setModalData={setModalData}
-      ></Edit>
+      <div className="container">
+        <div className="row">
+          <div className="col-7 col-ml-12">
+            <Create setCreateData={setCreateData}></Create>
+            <List
+              exes={exes}
+              setDeleteData={setDeleteData}
+              setModalData={setModalData}
+            ></List>
+            <Edit
+              setEditData={setEditData}
+              modalData={modalData}
+              setModalData={setModalData}
+            ></Edit>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
