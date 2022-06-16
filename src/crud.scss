@@ -244,11 +244,6 @@ input {
   background-color: #EB4755;
 }
 
-span{
-margin-right: 40px;
-margin-bottom: 20px;
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -260,6 +255,7 @@ margin-bottom: 20px;
 }
 
 .modal-dialog {
+  position: relative;
   height: 520px;
   width: 350px;
   position: fixed;
@@ -272,11 +268,10 @@ margin-bottom: 20px;
 }
 
 .modal-header {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .modal-title {
@@ -288,6 +283,23 @@ margin-bottom: 20px;
   background-color: transparent;
   font-size: 30px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 7px;
+  right: 17px;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.btn-modalC {
+  background-color: #5B68F6;
+}
+
+.btn-modal {
+  background-color: #34D186;
 }

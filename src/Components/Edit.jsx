@@ -80,14 +80,14 @@ function Edit({ modalData, setModalData, setEditData }) {
           <div className="modal-footer">
             <button
               type="button"
-              className="btn btn-outline-secondary"
+              className="btn btn-modalC btn-outline-secondary"
               onClick={() => setModalData(null)}
             >
               Close
             </button>
             <button
               type="button"
-              className="btn btn-outline-primary"
+              className="btn btn-modal btn-outline-primary"
               onClick={handleEdit}
             >
               Save changes
