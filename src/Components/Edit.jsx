@@ -67,10 +67,7 @@ function Edit({ modalData, setModalData, setEditData }) {
               />
             </div>
             <div className="form-group">
-              <label>Total Kilometers Ride:</label>
-            </div>
-            <div className="form-group">
-              <label>Add New Kilometers</label>
+              <label>Edit kilometers:</label>
               <input
                 type="number"
                 className="form-row"

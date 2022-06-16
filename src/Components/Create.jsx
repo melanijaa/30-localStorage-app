@@ -36,12 +36,12 @@ function Create({ setCreateData }) {
           <input
             type="date"
             className="form-control"
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setTime(e.target.value)}
             value={time}
           />
         </div>
         <div className="form-group">
-          <label>Total Kilometers Ride:</label>
+          <label>Total Ride:</label>
           <input
             type="text"
             className="form-control"

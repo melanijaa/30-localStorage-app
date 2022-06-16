@@ -17,7 +17,7 @@ function Ex({ ex, setDeleteData, setModalData }) {
           <span>{ex.id}</span>
           <span>{ex.name}</span>
           <span>{ex.time}</span>
-          <span>{ex.km}</span>
+          <span>{ex.km}km</span>
           <span>
             {ex.isBusy ? (
               <div className="uzimtas">Busy</div>

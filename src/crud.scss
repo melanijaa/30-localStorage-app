@@ -245,5 +245,49 @@ input {
 }
 
 span{
-margin-right: 50px;
+margin-right: 40px;
+margin-bottom: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;;
+  background-color: 'rgba (0, 0, 0, 0.7)';
+  z-index: 1000;
+}
+
+.modal-dialog {
+  height: 520px;
+  width: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px 35px;
+  z-index: 1000;
+}
+
+.modal-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.modal-title {
+  font-size: 20px;
+}
+
+.close {
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
