@@ -21,7 +21,7 @@ function Create({ setCreateData }) {
   return (
     <div className="card">
       <div className="card-body">
-        <label className="title">Add New Scooter</label>
+        <label className="title">ADD A NEW SCOOTER</label>
         <div className="form-group">
           <label>Registration Code:</label>
           <input
@@ -54,7 +54,7 @@ function Create({ setCreateData }) {
           className="btn2 btn-outline-primary"
           onClick={handleCreate}
         >
-          Create
+          CREATE
         </button>
       </div>
     </div>
