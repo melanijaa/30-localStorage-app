@@ -14,11 +14,11 @@ function Ex({ ex, setDeleteData, setModalData }) {
     <div className="list-group-item">
       <div className="item">
         <div className="content">
-          <span>{ex.id}</span>
-          <span>{ex.name}</span>
-          <span>{ex.time}</span>
-          <span>{ex.km}km</span>
-          <span>
+          <span className="con">{ex.id}</span>
+          <span className="con">{ex.name}</span>
+          <span className="con">{ex.time}</span>
+          <span className="con">{ex.km}km</span>
+          <span className="con">
             {ex.isBusy ? (
               <div className="uzimtas">Busy</div>
             ) : (
